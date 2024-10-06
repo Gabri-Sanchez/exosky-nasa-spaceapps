@@ -30,6 +30,10 @@ def sistema():
 def trappist():
     return render_template('SistemaTrappist1.html')
 
+@app.route('/cancri') 
+def cancri():
+    return render_template('55CancriE.html')
+
 @app.route('/test') 
 def test():
     return render_template('test.html')

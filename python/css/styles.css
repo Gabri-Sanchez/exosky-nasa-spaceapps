@@ -1,0 +1,27 @@
+/* Fondo */
+body {
+    background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/exoplanet_51_pegasi_b.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Astronauta animado */
+.astronaut {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 150px;
+    animation: float 4s ease-in-out infinite;
+    z-index: 50;
+}
+
+/* Animación flotante del astronauta */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}

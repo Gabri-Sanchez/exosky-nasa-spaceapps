@@ -3,25 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video de YouTube - Space IoT</title>
+    <title>Kepler-22b - ExoVisor</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/planeta.js"></script>
+
     <style>
-        /* Para que la imagen de fondo cubra todo el cuerpo de la página */
         body {
-            background-image: url('../static/space.jpg'); /* Reemplaza con la ruta de tu imagen */
+            margin: 0;
+            overflow: visible;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg");
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            backdrop-filter:  brightness(50%);
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #canvas_container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        button {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid white;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.9em;
+            background: #000000;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        button:hover {
+            background: #ffffff;
+            color: #000000;
         }
     </style>
+    
 </head>
 <body class="bg-gray-900 text-white">
+    <!-- Astronauta animado con CSS -->
+    <div class="astronaut">
+        <div class="head">
+            <div class="visor"></div>
+        </div>
+        <div class="body">
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+            <div class="leg left"></div>
+            <div class="leg right"></div>
+        </div>
+    </div>
 
     <!-- Encabezado -->
     <header class="bg-gray-800 shadow-md">
         <div class="container mx-auto flex items-center justify-between py-4 px-6">
-            <a href="#" class="text-2xl font-bold text-white">Space IoT</a>
+            <a href="#" class="text-2xl font-bold text-white">ExoVisor</a>
             <nav class="space-x-4">
                 <a href="#" class="text-gray-200 hover:text-blue-400">Inicio</a>
                 <a href="/equipo" class="text-gray-200 hover:text-blue-400 mx-4">Equipo</a>
@@ -31,38 +79,47 @@
 
     <!-- Contenido principal -->
     <main class="container mx-auto mt-10">
-        <h1 class="text-4xl font-bold text-center mb-10">Reproductor de Video de YouTube</h1>
+        <h1 class="text-4xl font-bold text-center mb-10">Información sobre Kepler-22b</h1>
 
-        <!-- Contenedor para el video -->
+        <!-- Contenedor para el contenido -->
         <div class="flex justify-center mb-8">
-            <iframe class="w-full md:w-2/3 h-64 md:h-96 rounded-lg shadow-md" 
-                    src="https://www.youtube.com/watch?v=o2MgG6KhO1E&list=PLTiv_XWHnOZrNBx4W9OMDy7SPlPcKWUq_" 
-                    title="Video de YouTube" 
+            <iframe class="w-full md:w-1/2 h-96 rounded-lg shadow-md" 
+                    src="https://science.nasa.gov/exoplanet-catalog/kepler-22b/" 
+                    title="Kepler-22b - NASA" 
                     frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
             </iframe>
-        </div>
+        </div>        
 
         <!-- Botón de volver -->
         <div class="absolute bottom-6 left-6">
-            <a href="#" class="bg-blue-800 text-white hover:bg-blue-700 font-semibold py-2 px-4 rounded transition duration-200">
+            <a href="/otra-pagina" class="bg-blue-800 text-white hover:bg-blue-700 font-semibold py-2 px-4 rounded transition duration-200">
                 Volver
             </a>
         </div>
+
+        <figure>
+            <img src="../static/space.webp" alt="Descripción del GIF">
+            <figcaption>Este es un GIF divertido.</figcaption>
+        </figure>
+
+
     </main>
 
     <!-- Pie de página -->
     <footer class="bg-gray-800 bg-opacity-90 text-gray-200 py-6 mt-10">
         <div class="container mx-auto text-center">
-            <p class="text-sm">© 2024 Space IoT. Todos los derechos reservados.</p>
+            <p class="text-sm">© 2024 ExoVisor. Todos los derechos reservados.</p>
             <nav class="mt-4">
                 <a href="#" class="text-gray-400 hover:text-white mx-2">Privacidad</a>
                 <a href="#" class="text-gray-400 hover:text-white mx-2">Términos</a>
                 <a href="#" class="text-gray-400 hover:text-white mx-2">Contacto</a>
             </nav>
         </div>
+        <div id="canvas_container"></div>
     </footer>
 
 </body>
 </html>
+
+

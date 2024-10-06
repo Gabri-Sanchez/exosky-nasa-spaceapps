@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>55 Cancri e - ExoVisor</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Para que la imagen de fondo cubra todo el cuerpo de la página */
+        body {
+            background-image: url('../static/space1.jpg'); /* Reemplaza con la ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Encabezado -->
+    <header class="bg-gray-800 shadow-md">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <a href="/" class="text-2xl font-bold text-white">ExoVisor</a>
+            <nav class="space-x-4">
+                <a href="/" class="text-gray-200 hover:text-blue-400">Inicio</a>
+                <a href="/equipo" class="text-gray-200 hover:text-blue-400 mx-4">Equipo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container mx-auto mt-10">
+        <h1 class="text-4xl font-bold text-center mb-10">55 Cancri e</h1>
+
+        <!-- Contenedor para la imagen y la información -->
+        <div class="flex justify-center items-start mb-8">
+            <!-- Imagen del exoplaneta -->
+            <img src="../static/55 Cancri e.jfif" class="w-1/3 h-auto rounded-lg shadow-md mr-6" alt="55 Cancri e">
+
+            <!-- Curiosidades -->
+            <div class="bg-gray-900 bg-opacity-80 p-6 rounded-lg shadow-md w-2/3">
+                <h2 class="text-3xl font-bold text-blue-400 mb-4">Curiosidades</h2>
+                <ul class="list-disc list-inside text-gray-300 text-lg font-bold">
+                    <li>Ubicado a 41 años luz de la Tierra, en la constelación de Cáncer.</li>
+                    <li>Tarda solo 3 días en completar una órbita alrededor de su estrella.</li>
+                    <li>Es el primer exoplaneta de carbono descubierto que orbita una estrella similar a nuestro Sol.</li>
+                    <li>Está clasificado como una "megatierra" debido a su masa y composición.</li>
+                    <li>Las temperaturas en su superficie son extremadamente altas, y su composición podría incluir diamantes.</li>
+                </ul>
+            </div>            
+        </div>
+
+        <h2 class="text-3xl font-semibold text-center text-white-400 mb-4">Vea a 55 Cancri e!</h2>
+
+        <div class="flex justify-center items-start mb-8 space-x-4">
+            <div class="w-full md:w-2/3 h-96 md:h-[600px] rounded-lg shadow-md">
+                <iframe 
+                    class="w-full h-full rounded-lg" 
+                    src="https://www.youtube.com/embed/CdJSiy9vuz4" 
+                    title="Video de YouTube" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div> 
+            <figure class="w-full md:w-1/5"> 
+                <img src="../static/space4.gif" alt="Descripción del GIF" class="w-full h-auto rounded-lg">
+            </figure>
+        </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-800 bg-opacity-90 text-gray-200 py-6 mt-10">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">© 2024 ExoVisor. Todos los derechos reservados.</p>
+            <nav class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Privacidad</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Términos</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Contacto</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
